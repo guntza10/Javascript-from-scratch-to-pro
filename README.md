@@ -56,3 +56,5 @@
 - ทำงานร่วมกับ HTML/CSS
 - ทำงานได้กับทุก browser
 - นอกจากทำ website แล้วยังสามารถใช้ทำ servers, mobile applications ได้อีกด้วย
+
+# `JavaScript Fundamentals`
