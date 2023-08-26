@@ -29,3 +29,24 @@
 - get,set cookies
 - ask questions to the visitor, show messages.
 - เก็บ data ไว้ที่ client-side (`local storage`)
+
+## `What CAN’T in-browser JavaScript do?`
+
+- js ไม่สามารถ direct access OS functions ได้
+  - ไม่สามารถ read,write files บน hard disk ได้
+  - modern browser allow การทำงานกับ file แต่จะ limit access
+  - และจะให้ access ถ้า user ทำ action บางอย่างเท่านั้น
+  - เช่น การ browse file ผ่าน `<input>`
+- การใช้ camera,microphone และ other devices ต้อง require permission
+  - เพราะฉะนั้นการเปิด web ขึ้นมา อาจจะไม่สามารถแอบเปิด camera,microphone และ other devices ได้ ถ้า user ไม่ allow permission
+- js จาก คนละ tab,window กัน ไม่สามารถ access หากันได้ (ถ้าเป็นคนละ web กัน) ซึ่งสิ่งนี้เรียกว่า `Same Origin Policy`
+  - ยกตัวอย่าง tab,window ของเว็บ `http://anysite.com` ไม่สามารถ access tab,window ของเว็บ `http://gmail.com` ได้
+  - ซึ่ง `Same Origin Policy` ก็จะป้องกันการขโมยข้อมูลจากคนละ tab,window ได้
+- js สามารถ communicate ผ่าน net ไปยัง server ของหน้าที่เปิดอยู่ตอนนี้ได้อย่างง่ายดาย
+  - แต่ ability ในการรับ data จาก website หรือ domain อื่นๆ จะลดลง
+  - แต่การจะทำแบบนั้นได้ ต้อง require explicit agreement (ที่ต้องแนบมากับ HTTP headers) จากระยะไกล
+  - นี่เป็น safety limitation (ข้อจำกัดด้านความปลอดภัย)
+  - safety limitation นี้จะใช้ไม่ได้ ถ้าใช้ js นอก browser
+  - เช่น บน server modern browser ยัง allow plugin/extension ที่อาจจะขอ permissions เพ่ิมเติม
+
+## `What makes JavaScript unique?`
