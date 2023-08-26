@@ -50,3 +50,7 @@
   - เช่น บน server modern browser ยัง allow plugin/extension ที่อาจจะขอ permissions เพ่ิมเติม
 
 ## `What makes JavaScript unique?`
+
+- ทำงานร่วมกับ HTML/CSS
+- ทำงานได้กับทุก browser
+- นอกจากทำ website แล้วยังสามารถใช้ทำ servers, mobile applications ได้อีกด้วย
